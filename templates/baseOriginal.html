@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% block titulo %}
+    <title>Mi app</title>
+    {% endblock %}
+</head>
+<body>
+    {% block sidebar %} 
+    <ul class="sidebar-na">
+        <li><a href="{% url 'home'%}">Home</li>
+        <li><a href="{% url 'categorias'%}">Categorias</li>
+        <li><a href="{% url 'productos'%}">Productos</li>
+    </ul> 
+    {% endblock %}
+
+    <div class="col-sm-10">
+        {% block contenido %}
+               <h3>Este texto es de la plantilla base</h3>
+        {% endblock %}
+    </div>
+
+</body>
+</html>
